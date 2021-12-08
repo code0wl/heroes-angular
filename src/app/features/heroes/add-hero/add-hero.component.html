@@ -1,3 +1,36 @@
-<p>
-  add works!
-</p>
+<main class="p-24">
+    <header class="my-10">
+        <h2>🦸 Add a hero</h2>
+        <span>Add a new hero to our ever growing list of awesomeness</span>
+    </header>
+
+    <form [formGroup]="addHeroForm" class="grid grid-cols-2 gap-3">
+        <mat-form-field appearance="fill">
+            <mat-label for="name">Hero Name</mat-label>
+            <input id="name" formControlName="name" matInput />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label for="description">Description</mat-label>
+            <input id="description" formControlName="description" matInput />
+        </mat-form-field>
+
+        <mat-radio-group formControlName="gender" aria-label="Select a gender">
+            <mat-radio-button class="mx-2" value="male">Male</mat-radio-button>
+            <mat-radio-button class="mx-2" value="female">Female</mat-radio-button>
+        </mat-radio-group>
+    </form>
+
+    <footer class="flex justify-end">
+        <button routerLink="../" mat-button>Cancel</button>
+        <button
+            routerLink="../"
+            [disabled]="!addHeroForm.valid"
+            mat-raised-button
+            (click)="add()"
+            color="accent"
+        >
+            Save
+        </button>
+    </footer>
+</main>

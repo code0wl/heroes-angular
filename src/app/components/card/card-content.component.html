@@ -1,13 +1,11 @@
 <mat-card>
-  <mat-card-title>{{ name }}</mat-card-title>
-  <mat-card-subtitle>{{ description }}</mat-card-subtitle>
-  <mat-card-actions>
-    <button
-      (click)="handlePrimaryClick($event)"
-      mat-raised-button
-      color="primary"
+    <mat-card-title>
+        {{ cardDetails.gender === 'female' ? '🦸‍♀️' : '🦸‍♂️' }} {{ cardDetails.name }}</mat-card-title
     >
-      {{ actionLabel }}
-    </button>
-  </mat-card-actions>
+    <mat-card-subtitle>{{ cardDetails.description }}</mat-card-subtitle>
+    <mat-card-actions>
+        <button (click)="handlePrimaryClick($event)" mat-button color="warn">
+            {{ actionLabel }}
+        </button>
+    </mat-card-actions>
 </mat-card>

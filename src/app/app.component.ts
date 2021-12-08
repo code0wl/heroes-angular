@@ -1,13 +1,8 @@
-import { Component } from '@angular/core';
-export class Customer {
-  public id: number;
-  public name: string;
-}
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {
-  customers: Customer[] = [{ id: 1, name: 'john' }];
-}
+export class AppComponent {}

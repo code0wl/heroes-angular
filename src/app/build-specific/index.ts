@@ -5,7 +5,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
  * https://ngrx.io/guide/store-devtools/recipes/exclude
  */
 export const externalModules = [
-  StoreDevtoolsModule.instrument({
-    maxAge: 25,
-  }),
+    StoreDevtoolsModule.instrument({
+        maxAge: 25,
+    }),
 ];

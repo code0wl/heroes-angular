@@ -1,5 +1,6 @@
 export class Hero {
-  id: string;
-  name: string;
-  description: string;
+    public readonly id: string;
+    public readonly name: string;
+    public readonly description: string;
+    public readonly gender: string;
 }

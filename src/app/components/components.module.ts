@@ -9,14 +9,8 @@ import { MaterialModule } from '@vendor-features/material.module';
 const components = [CardContentComponent, NavComponent];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule,
-    MaterialModule,
-  ],
-  declarations: components,
-  exports: [...components, FormsModule, ReactiveFormsModule, MaterialModule],
+    imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, MaterialModule],
+    declarations: components,
+    exports: [...components, FormsModule, ReactiveFormsModule, MaterialModule],
 })
 export class ComponentsModule {}

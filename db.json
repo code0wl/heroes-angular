@@ -1,29 +1,34 @@
 {
-  "heroes": [
-    {
-      "id": "HeroBjorn",
-      "name": "Bjorn Ironside",
-      "description": "king of 9th century Sweden"
-    },
-    {
-      "id": "HeroIvar",
-      "name": "Ivar the Boneless",
-      "description": "commander of the Great Heathen Army"
-    },
-    {
-      "id": "HeroLagertha",
-      "name": "Lagertha the Shieldmaidensapop",
-      "description": "aka Hlaðgerðr"
-    },
-    {
-      "id": "HeroRagnar",
-      "name": "Ragnar Lothbrok",
-      "description": "aka Ragnar Sigurdsson"
-    },
-    {
-      "id": "HeroThora",
-      "name": "Thora Town-hart",
-      "description": "daughter of Earl Herrauðr of Götaland"
-    }
-  ]
+    "heroes": [
+        {
+            "id": "HeroBjorn",
+            "name": "Bjorn Ironside",
+            "description": "king of 9th century Sweden",
+            "gender": "male"
+        },
+        {
+            "id": "HeroIvar",
+            "name": "Ivar the Boneless",
+            "description": "commander of the Great Heathen Army",
+            "gender": "male"
+        },
+        {
+            "id": "HeroLagertha",
+            "name": "Lagertha the Shieldmaidensapop",
+            "description": "aka Hlaðgerðr",
+            "gender": "female"
+        },
+        {
+            "id": "HeroRagnar",
+            "name": "Ragnar Lothbrok",
+            "description": "aka Ragnar Sigurdsson",
+            "gender": "male"
+        },
+        {
+            "id": "HeroThora",
+            "name": "Thora Town-hart",
+            "description": "daughter of Earl Herrauðr of Götaland",
+            "gender": "female"
+        }
+    ]
 }

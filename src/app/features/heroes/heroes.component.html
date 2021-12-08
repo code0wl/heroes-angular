@@ -1,10 +1,6 @@
+<div *ngIf="loading$ | async">... Loading</div>
 <div *ngIf="heroes$ | async as heroes">
-  <app-hero-list
-    [heroes]="heroes"
-    (deleted)="askToDelete($event)"
-  ></app-hero-list>
+    <app-hero-list [heroes]="heroes" (deleted)="confirm($event)"></app-hero-list>
 </div>
 
-<button routerLink="add" color="accent" mat-fab class="fixed right-2 bottom-2">
-  +
-</button>
+<button routerLink="add" color="accent" mat-fab class="fixed right-2 bottom-2">+</button>

@@ -1,8 +1,12 @@
-<div class="m-2" *ngFor="let hero of heroes">
-  <app-card-content
-    [name]="hero.name"
-    [description]="hero.description"
-    actionLabel="Delete"
-    (primaryClick)="deleteHero(hero)"
-  ></app-card-content>
+<div class="m-12" *ngFor="let hero of heroes">
+    <app-card-content
+        [cardDetails]="{
+            name: hero.name,
+            description: hero.description,
+            gender: hero.gender,
+            id: hero.id
+        }"
+        actionLabel="Delete"
+        (primaryClick)="deleteHero(hero)"
+    ></app-card-content>
 </div>
