@@ -1,18 +1,8 @@
-<div *ngFor="let hero of heroes">
+<div class="m-2" *ngFor="let hero of heroes">
   <app-card-content
     [name]="hero.name"
     [description]="hero.description"
+    actionLabel="Delete"
+    (primaryClick)="deleteHero(hero)"
   ></app-card-content>
-  <footer class="card-footer">
-    <app-raised-button
-      (clicked)="deleteHero($event)"
-      label="Delete"
-      [item]="hero"
-    ></app-raised-button>
-    <app-raised-button
-      (clicked)="selectHero($event)"
-      label="Edit"
-      [item]="hero"
-    ></app-raised-button>
-  </footer>
 </div>

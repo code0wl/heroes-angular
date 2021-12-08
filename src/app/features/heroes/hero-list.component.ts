@@ -15,13 +15,8 @@ import { Hero } from '@models/hero';
 export class HeroListComponent {
   @Input() heroes: Hero[];
   @Output() deleted = new EventEmitter<Hero>();
-  @Output() selected = new EventEmitter<Hero>();
 
-  selectHero(hero: Hero) {
-    this.selected.emit(hero);
-  }
-
-  deleteHero(hero: Hero) {
+  public deleteHero(hero: Hero): void {
     this.deleted.emit(hero);
   }
 }

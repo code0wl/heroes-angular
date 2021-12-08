@@ -1,4 +1,13 @@
 <mat-card>
-  <div class="name">{{ name }}</div>
-  <div class="description">{{ description }}</div>
+  <mat-card-title>{{ name }}</mat-card-title>
+  <mat-card-subtitle>{{ description }}</mat-card-subtitle>
+  <mat-card-actions>
+    <button
+      (click)="handlePrimaryClick($event)"
+      mat-raised-button
+      color="primary"
+    >
+      {{ actionLabel }}
+    </button>
+  </mat-card-actions>
 </mat-card>

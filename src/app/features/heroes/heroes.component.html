@@ -1,22 +1,9 @@
-<div class="column is-8" *ngIf="heroes$ | async as heroes">
+<div *ngIf="heroes$ | async as heroes">
   <app-hero-list
     *ngIf="!selected"
     [heroes]="heroes"
-    (selected)="select($event)"
     (deleted)="askToDelete($event)"
   ></app-hero-list>
-  <app-hero-detail
-    *ngIf="selected"
-    [hero]="selected"
-    (unselect)="clear()"
-    (save)="save($event)"
-  ></app-hero-detail>
 </div>
 
-<app-modal
-  class="modal-hero"
-  [message]="message"
-  [isOpen]="showModal"
-  (handleNo)="closeModal()"
-  (handleYes)="deleteHero()"
-></app-modal>
+<button color="accent" mat-fab class="fixed right-2 bottom-2">+</button>

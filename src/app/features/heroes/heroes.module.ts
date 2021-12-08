@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HeroesComponent } from './heroes.component';
 import { HeroListComponent } from './hero-list.component';
-import { HeroDetailComponent } from './hero-detail.component';
 import { ComponentsModule } from '@components/components.module';
 import { FormsModule } from '@angular/forms';
 
@@ -17,6 +16,6 @@ const routes: Routes = [
 @NgModule({
   imports: [CommonModule, RouterModule.forChild(routes), ComponentsModule],
   exports: [FormsModule],
-  declarations: [HeroesComponent, HeroListComponent, HeroDetailComponent],
+  declarations: [HeroesComponent, HeroListComponent],
 })
 export class HeroesModule {}

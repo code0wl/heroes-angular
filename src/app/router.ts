@@ -9,11 +9,4 @@ export const routes: Routes = [
         ({ HeroesModule }) => HeroesModule
       ),
   },
-  {
-    path: 'villains',
-    loadChildren: () =>
-      import('@features/villains/villains.module').then(
-        ({ VillainsModule }) => VillainsModule
-      ),
-  },
 ];

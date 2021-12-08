@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Hero } from '@models/hero';
-import { Observable } from 'rxjs';
+import { Observable, take } from 'rxjs';
 import { HeroService } from './hero.service';
 
 @Component({
@@ -10,11 +10,9 @@ import { HeroService } from './hero.service';
 export class HeroesComponent {
   selected: Hero;
   heroes$: Observable<Hero[]>;
-  message = '?';
   heroToDelete: Hero;
-  showModal = false;
 
-  constructor(private heroService: HeroService) {
+  constructor(private readonly heroService: HeroService) {
     this.heroes$ = heroService.entities$;
     this.getHeroes();
   }
@@ -24,10 +22,10 @@ export class HeroesComponent {
   }
 
   askToDelete(hero: Hero) {
-    this.heroToDelete = hero;
-    this.showModal = true;
-    if (this.heroToDelete.name) {
-      this.message = `Would you like to delete ${this.heroToDelete.name}?`;
+    const prompt = confirm(`Would you like to delete ${hero.name}?`);
+
+    if (prompt) {
+      this.deleteHero(hero);
     }
   }
 
@@ -35,22 +33,11 @@ export class HeroesComponent {
     this.selected = null;
   }
 
-  closeModal() {
-    this.showModal = false;
-  }
-
-  deleteHero() {
-    this.closeModal();
-    if (this.heroToDelete) {
-      this.heroService
-        .delete(this.heroToDelete.id)
-        .subscribe(() => (this.heroToDelete = null));
+  deleteHero(hero) {
+    if (hero) {
+      this.heroService.delete(hero.id).pipe(take(1)).subscribe();
     }
     this.clear();
-  }
-
-  enableAddMode() {
-    this.selected = <any>{};
   }
 
   getHeroes() {
@@ -64,10 +51,6 @@ export class HeroesComponent {
     } else {
       this.add(hero);
     }
-  }
-
-  select(hero: Hero) {
-    this.selected = hero;
   }
 
   update(hero: Hero) {

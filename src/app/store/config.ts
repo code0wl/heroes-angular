@@ -12,9 +12,5 @@ export const defaultDataServiceConfig: DefaultDataServiceConfig = {
       entityResourceUrl: `${root}/heroes/`,
       collectionResourceUrl: `${root}/heroes/`,
     },
-    Villain: {
-      entityResourceUrl: `${root}/villains/`,
-      collectionResourceUrl: `${root}/villains/`,
-    },
   },
 };
