@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Villain } from '@app/models';
+import { Villain } from '@models/villain';
 import { Observable } from 'rxjs';
 import { VillainService } from './villain.service';
 

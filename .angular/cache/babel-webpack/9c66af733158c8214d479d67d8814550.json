@@ -1,1 +1,0 @@
-{"ast":null,"code":"const entityMetadata = {\n  Hero: {},\n  Villain: {}\n};\nconst pluralNames = {\n  Hero: 'Heroes'\n};\nexport const entityConfig = {\n  entityMetadata,\n  pluralNames\n};","map":null,"metadata":{},"sourceType":"module"}
