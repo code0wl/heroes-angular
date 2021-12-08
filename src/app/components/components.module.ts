@@ -7,7 +7,6 @@ import { ButtonFooterComponent } from './button-footer.component';
 import { ModalComponent } from '@components/modal.component';
 import { HeaderBarComponent } from './header-bar.component';
 import { HeaderBarBrandComponent } from './header-bar-brand.component';
-import { HeaderBarLinksComponent } from './header-bar-links.component';
 import { NavComponent } from './nav.component';
 import { RouterModule } from '@angular/router';
 
@@ -16,7 +15,6 @@ const components = [
   CardContentComponent,
   NavComponent,
   ListHeaderComponent,
-  HeaderBarLinksComponent,
   HeaderBarBrandComponent,
   HeaderBarComponent,
   ModalComponent,

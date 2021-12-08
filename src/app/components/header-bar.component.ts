@@ -10,7 +10,6 @@ import { Component } from '@angular/core';
         aria-label="main navigation"
       >
         <app-header-bar-brand></app-header-bar-brand>
-        <app-header-bar-links></app-header-bar-links>
       </nav>
     </header>
   `,
