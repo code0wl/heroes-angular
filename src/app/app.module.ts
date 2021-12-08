@@ -8,6 +8,7 @@ import { AppStoreModule } from './store/store.module';
 import { RouterModule } from '@angular/router';
 import { externalModules } from './build-specific';
 import { ComponentsModule } from '@components/components.module';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import { ComponentsModule } from '@components/components.module';
     ComponentsModule,
     BrowserModule,
     HttpClientModule,
+    MatCardModule,
     RouterModule.forRoot(routes),
     AppStoreModule,
     externalModules,

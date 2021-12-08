@@ -1,9 +1,4 @@
 <div class="content-container">
-  <app-list-header
-    title="Villains"
-    (add)="enableAddMode()"
-    (refresh)="getVillains()"
-  ></app-list-header>
   <div class="columns is-multiline is-variable">
     <div class="column is-8" *ngIf="villains$ | async as villains">
       <app-villain-list

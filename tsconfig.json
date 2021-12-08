@@ -17,6 +17,7 @@
       "@app/*": ["src/app/*"],
       "@models/*": ["src/app/models/*"],
       "@components/*": ["src/app/components/*"],
+      "@vendor-features/*": ["src/app/vendor-features/*"],
       "@features/*": ["src/app/features/*"],
       "@store/*": ["src/app/store/*"],
       "@environments/*": ["src/environments/*"]

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Hero } from '@models/hero';
 import { Observable } from 'rxjs';
 import { HeroService } from './hero.service';
@@ -7,7 +7,7 @@ import { HeroService } from './hero.service';
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
 })
-export class HeroesComponent implements OnInit {
+export class HeroesComponent {
   selected: Hero;
   heroes$: Observable<Hero[]>;
   message = '?';
@@ -16,9 +16,6 @@ export class HeroesComponent implements OnInit {
 
   constructor(private heroService: HeroService) {
     this.heroes$ = heroService.entities$;
-  }
-
-  ngOnInit() {
     this.getHeroes();
   }
 

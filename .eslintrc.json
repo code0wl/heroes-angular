@@ -1,0 +1,67 @@
+{
+    "root": true,
+    "ignorePatterns": ["polyfills.ts"],
+    "overrides": [
+        {
+            "files": ["*.ts"],
+            "parserOptions": {
+                "project": ["tsconfig.json"],
+                "createDefaultProgram": true
+            },
+            "extends": [
+                "plugin:@angular-eslint/recommended",
+                "plugin:@typescript-eslint/recommended",
+                "plugin:@typescript-eslint/recommended-requiring-type-checking",
+                "plugin:prettier/recommended"
+            ],
+            "rules": {
+                "@typescript-eslint/ban-ts-ignore": "off",
+                "@typescript-eslint/require-await": 1,
+                "no-unsafe-optional-chaining": 1,
+                "prefer-spread": 1,
+                "prefer-rest-params": 1,
+                "@typescript-eslint/ban-types": 1,
+                "@typescript-eslint/no-this-alias": 1,
+                "@typescript-eslint/no-empty-function": 1,
+                "@typescript-eslint/no-floating-promises": 1,
+                "@typescript-eslint/no-for-in-array": 1,
+                "@typescript-eslint/no-unsafe-assignment": 0,
+                "no-unused-vars": "off",
+                "@typescript-eslint/no-unused-vars": 2,
+                "@typescript-eslint/restrict-plus-operands": 1,
+                "@typescript-eslint/ban-ts-comment": 1,
+                "@typescript-eslint/prefer-regexp-exec": 0,
+                "@typescript-eslint/no-misused-promises": 1,
+                "@typescript-eslint/unbound-method": 0,
+                "@typescript-eslint/no-unsafe-call": 1,
+                "@typescript-eslint/restrict-template-expressions": 1,
+                "@typescript-eslint/no-unsafe-member-access": 1,
+                "@typescript-eslint/no-unsafe-return": 1,
+                "@angular-eslint/component-selector": [
+                    1,
+                    {
+                        "type": "element",
+                        "prefix": "app",
+                        "style": "kebab-case"
+                    }
+                ],
+                "@angular-eslint/directive-selector": [
+                    1,
+                    {
+                        "type": "attribute",
+                        "prefix": "app",
+                        "style": "camelCase"
+                    }
+                ]
+            }
+        },
+        {
+            "files": ["*.html"],
+            "extends": [
+                "plugin:@angular-eslint/template/recommended",
+                "plugin:prettier/recommended"
+            ],
+            "rules": {}
+        }
+    ]
+}

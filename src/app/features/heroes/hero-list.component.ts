@@ -24,12 +24,4 @@ export class HeroListComponent {
   deleteHero(hero: Hero) {
     this.deleted.emit(hero);
   }
-
-  // trackByHero(hero: Hero): string {
-  //   return hero.id;
-  // }
-
-  trackByHero(_: /* index not used */ number, hero: Hero): string {
-    return hero.id;
-  }
 }

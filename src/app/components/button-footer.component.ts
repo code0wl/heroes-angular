@@ -1,30 +1,20 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-button-footer',
+  selector: 'app-raised-button',
   template: `
-    <button
-      class="link"
-      [ngClass]="className"
-      [attr.aria-label]="label"
-      tabindex="0"
-      [attr.data-id]="item.id"
-      (click)="handleClick()"
-    >
-      <i [ngClass]="iconClasses"></i> <span>{{ label }}</span>
+    <button mat-raised-button (click)="handleClick()">
+      <span>{{ label }}</span>
     </button>
   `,
 })
-export class ButtonFooterComponent {
+export class RaisedButtonComponent {
   @Input() label;
-  @Input() className;
-  @Input() iconClasses;
   @Input() item;
-  @Input() dataId;
 
   @Output() clicked = new EventEmitter<any>();
 
-  handleClick() {
+  public handleClick(): void {
     this.clicked.emit(this.item);
   }
 }

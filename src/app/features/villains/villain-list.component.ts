@@ -21,10 +21,6 @@ export class VillainListComponent {
     return villain.id;
   }
 
-  trackByVillain(index: number, villain: Villain): string {
-    return villain.id;
-  }
-
   selectVillain(villain: Villain) {
     this.selected.emit(villain);
   }

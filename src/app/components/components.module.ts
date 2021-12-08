@@ -1,28 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ListHeaderComponent } from '@components/list-header.component';
-import { CardContentComponent } from '@components/card-content.component';
-import { ButtonFooterComponent } from './button-footer.component';
-import { ModalComponent } from '@components/modal.component';
-import { HeaderBarComponent } from './header-bar.component';
-import { HeaderBarBrandComponent } from './header-bar-brand.component';
-import { NavComponent } from './nav.component';
+import { CardContentComponent } from '@components/card/card-content.component';
+import { RaisedButtonComponent } from './button-footer.component';
+import { ModalComponent } from '@app/components/modal/modal.component';
+import { NavComponent } from '@components/nav/nav.component';
 import { RouterModule } from '@angular/router';
+import { MaterialModule } from '@app/vendor-features/material.module';
 
 const components = [
-  ButtonFooterComponent,
+  RaisedButtonComponent,
   CardContentComponent,
   NavComponent,
-  ListHeaderComponent,
-  HeaderBarBrandComponent,
-  HeaderBarComponent,
   ModalComponent,
 ];
 
 @NgModule({
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+    MaterialModule,
+  ],
   declarations: components,
-  exports: [...components, FormsModule, ReactiveFormsModule],
+  exports: [...components, FormsModule, ReactiveFormsModule, MaterialModule],
 })
 export class ComponentsModule {}

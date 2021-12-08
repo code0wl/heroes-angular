@@ -41,21 +41,19 @@
     </div>
   </div>
   <footer class="card-footer">
-    <app-button-footer
+    <app-raised-button
       class="card-footer-item"
       [className]="'cancel-button'"
-      [iconClasses]="'fas fa-undo'"
       (clicked)="clear()"
       label="Cancel"
       [item]="editingVillain"
-    ></app-button-footer>
-    <app-button-footer
+    ></app-raised-button>
+    <app-raised-button
       class="card-footer-item"
       [className]="'save-button'"
-      [iconClasses]="'fas fa-save'"
       (clicked)="saveVillain()"
       label="Save"
       [item]="editingVillain"
-    ></app-button-footer>
+    ></app-raised-button>
   </footer>
 </div>

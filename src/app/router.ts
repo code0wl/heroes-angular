@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { NotFoundComponent } from '@components/not-found.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'heroes' },
@@ -17,5 +16,4 @@ export const routes: Routes = [
         ({ VillainsModule }) => VillainsModule
       ),
   },
-  { path: '**', component: NotFoundComponent },
 ];
