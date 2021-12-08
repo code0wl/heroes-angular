@@ -1,26 +1,22 @@
-<div class="content-container">
-  <div class="columns is-multiline is-variable">
-    <div class="column is-8" *ngIf="heroes$ | async as heroes">
-      <app-hero-list
-        *ngIf="!selected"
-        [heroes]="heroes"
-        (selected)="select($event)"
-        (deleted)="askToDelete($event)"
-      ></app-hero-list>
-      <app-hero-detail
-        *ngIf="selected"
-        [hero]="selected"
-        (unselect)="clear()"
-        (save)="save($event)"
-      ></app-hero-detail>
-    </div>
-  </div>
-
-  <app-modal
-    class="modal-hero"
-    [message]="message"
-    [isOpen]="showModal"
-    (handleNo)="closeModal()"
-    (handleYes)="deleteHero()"
-  ></app-modal>
+<div class="column is-8" *ngIf="heroes$ | async as heroes">
+  <app-hero-list
+    *ngIf="!selected"
+    [heroes]="heroes"
+    (selected)="select($event)"
+    (deleted)="askToDelete($event)"
+  ></app-hero-list>
+  <app-hero-detail
+    *ngIf="selected"
+    [hero]="selected"
+    (unselect)="clear()"
+    (save)="save($event)"
+  ></app-hero-detail>
 </div>
+
+<app-modal
+  class="modal-hero"
+  [message]="message"
+  [isOpen]="showModal"
+  (handleNo)="closeModal()"
+  (handleYes)="deleteHero()"
+></app-modal>

@@ -2,15 +2,12 @@ import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-raised-button',
-  template: `
-    <button mat-raised-button (click)="handleClick()">
-      <span>{{ label }}</span>
-    </button>
-  `,
+  templateUrl: './raised-button.component.html',
 })
 export class RaisedButtonComponent {
   @Input() label;
   @Input() item;
+  @Input() color = 'accent';
 
   @Output() clicked = new EventEmitter<any>();
 
