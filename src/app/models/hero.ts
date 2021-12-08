@@ -1,6 +1,4 @@
-import { PersonInterface } from './person.interface';
-
-export class Hero implements PersonInterface {
+export class Hero {
   id: string;
   name: string;
   description: string;

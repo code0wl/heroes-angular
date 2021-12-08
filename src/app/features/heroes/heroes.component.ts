@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
 import { Hero } from '@models/hero';
 import { Observable, take } from 'rxjs';
-import { HeroService } from './hero.service';
+import { HeroService } from './services/hero.service';
 
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
 })
 export class HeroesComponent {
-  selected: Hero;
-  heroes$: Observable<Hero[]>;
-  heroToDelete: Hero;
+  public readonly heroes$: Observable<Hero[]>;
 
   constructor(private readonly heroService: HeroService) {
     this.heroes$ = heroService.entities$;
@@ -29,31 +27,13 @@ export class HeroesComponent {
     }
   }
 
-  clear() {
-    this.selected = null;
-  }
-
   deleteHero(hero) {
     if (hero) {
       this.heroService.delete(hero.id).pipe(take(1)).subscribe();
     }
-    this.clear();
   }
 
   getHeroes() {
     this.heroService.getAll();
-    this.clear();
-  }
-
-  save(hero: Hero) {
-    if (this.selected && this.selected.name) {
-      this.update(hero);
-    } else {
-      this.add(hero);
-    }
-  }
-
-  update(hero: Hero) {
-    this.heroService.update(hero);
   }
 }

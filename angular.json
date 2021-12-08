@@ -23,7 +23,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.json",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": ["src/favicon.ico"],
             "stylePreprocessorOptions": {
               "includePaths": ["src/styles"]
             },
@@ -90,7 +90,7 @@
             "karmaConfig": "src/karma.conf.js",
             "styles": ["src/styles.scss"],
             "scripts": [],
-            "assets": ["src/favicon.ico", "src/assets"]
+            "assets": ["src/favicon.ico"]
           }
         },
         "lint": {

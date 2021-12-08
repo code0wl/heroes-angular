@@ -1,9 +1,10 @@
 <div *ngIf="heroes$ | async as heroes">
   <app-hero-list
-    *ngIf="!selected"
     [heroes]="heroes"
     (deleted)="askToDelete($event)"
   ></app-hero-list>
 </div>
 
-<button color="accent" mat-fab class="fixed right-2 bottom-2">+</button>
+<button routerLink="add" color="accent" mat-fab class="fixed right-2 bottom-2">
+  +
+</button>
