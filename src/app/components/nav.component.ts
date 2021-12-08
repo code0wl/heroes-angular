@@ -4,18 +4,12 @@ import { Component } from '@angular/core';
   selector: 'app-nav',
   template: `
     <nav class="menu">
-      <p class="menu-label">Menu</p>
-      <ul class="menu-list">
-        <a routerLink="/heroes" routerLinkActive="router-link-active">
-          <span>Heroes</span>
-        </a>
-        <a routerLink="/villains" routerLinkActive="router-link-active">
-          <span>Villains</span>
-        </a>
-        <a routerLink="/about" routerLinkActive="router-link-active">
-          <span>About</span>
-        </a>
-      </ul>
+      <a routerLink="/heroes" routerLinkActive="router-link-active">
+        <span>Heroes</span>
+      </a>
+      <a routerLink="/villains" routerLinkActive="router-link-active">
+        <span>Villains</span>
+      </a>
     </nav>
   `,
 })

@@ -5,18 +5,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { routes } from './router';
 import { AppComponent } from './app.component';
 import { AppStoreModule } from './store/store.module';
-import { AboutComponent } from './about.component';
 import { RouterModule } from '@angular/router';
 import { externalModules } from './build-specific';
 import { ComponentsModule } from '@components/components.module';
 
 @NgModule({
-  declarations: [AppComponent, AboutComponent],
+  declarations: [AppComponent],
   imports: [
     ComponentsModule,
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
+    RouterModule.forRoot(routes),
     AppStoreModule,
     externalModules,
   ],
