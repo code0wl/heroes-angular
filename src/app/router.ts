@@ -1,19 +1,23 @@
 import { Routes } from '@angular/router';
 import { AboutComponent } from './about.component';
-import { NotFoundComponent } from './core';
+import { NotFoundComponent } from '@components/not-found.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'heroes' },
   {
     path: 'heroes',
     loadChildren: () =>
-      import('./heroes/heroes.module').then(m => m.HeroesModule)
+      import('@features/heroes/heroes.module').then(
+        ({ HeroesModule }) => HeroesModule
+      ),
   },
   {
     path: 'villains',
     loadChildren: () =>
-      import('./villains/villains.module').then(m => m.VillainsModule)
+      import('@features/villains/villains.module').then(
+        ({ VillainsModule }) => VillainsModule
+      ),
   },
   { path: 'about', component: AboutComponent },
-  { path: '**', component: NotFoundComponent }
+  { path: '**', component: NotFoundComponent },
 ];

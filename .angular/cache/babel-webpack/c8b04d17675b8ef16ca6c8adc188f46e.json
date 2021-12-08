@@ -1,0 +1,1 @@
+{"ast":null,"code":"export * from './hero';\nexport * from './villain';","map":null,"metadata":{},"sourceType":"module"}

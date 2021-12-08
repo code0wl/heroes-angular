@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { StoreDevtoolsModule } from '@ngrx/store-devtools';\n/**\n * Put dev specific code here, and prod specific code in index.prod.ts\n * https://ngrx.io/guide/store-devtools/recipes/exclude\n */\n\nexport const externalModules = [StoreDevtoolsModule.instrument({\n  maxAge: 25\n})];","map":null,"metadata":{},"sourceType":"module"}

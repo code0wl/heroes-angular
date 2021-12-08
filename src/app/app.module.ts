@@ -8,17 +8,18 @@ import { AppStoreModule } from './store/store.module';
 import { AboutComponent } from './about.component';
 import { RouterModule } from '@angular/router';
 import { externalModules } from './build-specific';
-import { declarations } from './core';
+import { ComponentsModule } from '@components/components.module';
 
 @NgModule({
-  declarations: [AppComponent, AboutComponent, declarations],
+  declarations: [AppComponent, AboutComponent],
   imports: [
+    ComponentsModule,
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
     AppStoreModule,
-    externalModules
+    externalModules,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
